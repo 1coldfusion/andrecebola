@@ -307,7 +307,7 @@ body {
 
 /*Media queries - vertical*/
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 900px) {
 
 	body {
 	overflow: auto;
