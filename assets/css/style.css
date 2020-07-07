@@ -1,0 +1,305 @@
+/* Global css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--bg-color-light);
+	overflow: hidden;
+	background-color: var(--gray-0);
+	color: var(--gray-6);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Scrollbar customization */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gray-2); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray-5);
+  border-radius: 20px;  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-6); 
+}
+
+/* Side nav */
+
+
+#sidenav {
+	position: fixed;
+	height: 100vh;
+	background-color: white;
+	box-shadow: 0px 4px 4px #E9ECED;
+}
+
+#nav-title {
+	margin-bottom: 140px;
+}
+
+#nav-title .name {
+	font-size: 24px;
+	font-weight: 400;
+	display: block;
+}
+
+#nav-title .career {
+	font-size: 16px;
+	color:var(--gray-5);
+}
+
+#menu-links a {
+	font-size: 18px;
+	color: var(--gray-7);
+}
+
+#menu-links ul li:hover .hop {
+	transform: translateY(-5px);
+}
+
+.hop {
+	transition: all .3s linear;	
+}
+
+/* Mobile NAV */
+
+#mobile-nav {
+	background-color: white;
+	display: none;
+	max-height: 83px;
+	overflow: hidden;
+	transition: all .4s linear;	
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+
+#mobile-nav .name {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+#mobile-nav .career {
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--gray-5);
+}
+
+#menu-links-mobile a {
+	font-size: 18px;
+	color: var(--gray-7);
+}
+
+#menu-links-mobile ul li:hover .hop {
+	transform: translateY(-5px);
+}
+
+.hop {
+	transition: all .3s linear;	
+}
+
+.mobile-expand {
+	max-height:100%!important;
+	transition: all .3s linear;	
+}
+
+/* Burger overrides */
+
+.hamburger-inner,.hamburger-inner::after,.hamburger-inner::before {
+	background-color: var(--gray-6);
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+ opacity:.9;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+ background-color: var(--gray-6);
+}
+
+/* Case studies body */
+
+.site-card {
+	background-color: white;
+	border-radius: 4px;
+	cursor: pointer;
+	min-height: 365px;
+}
+
+.site-card:hover .arrow {
+	transform: translateX(20px);
+	cursor: pointer;
+}
+
+.arrow {
+	transition: all .3s linear;
+	display: inline-block;
+}
+
+.site-card:hover .card-name {
+	font-weight: 600;
+}
+
+
+.card-name {
+	transition: all .1s linear;
+}
+
+.card-image {
+	background-image: url(../../assets/images/baseline.svg);
+	background-repeat: no-repeat;
+	background-position: top, center;
+	background-size: cover, contain;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.card-image-2 {
+	background-image: url(../../assets/images/event.svg);
+	background-repeat: no-repeat;
+	background-position: top, center;
+	background-size: cover, contain;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.card-image-3 {
+	background-image: url(../../assets/images/notification.svg);
+	background-repeat: no-repeat;
+	background-position: top, center;
+	background-size: cover, contain;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.card-image-4 {
+	background-image: url(../../assets/images/tutti.svg);
+	background-repeat: no-repeat;
+	background-position: top, center;
+	background-size: cover, contain;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.card-description {
+	font-size: 14px;
+	color:var(--gray-5);
+}
+
+/*Media queries - Downscale*/
+
+@media only screen and (max-width: 1600px) {
+
+	.card-description .w-70 {
+		width: 80%!important;
+	}
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+	body {
+		overflow-y: auto;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+
+#nav-title .name {
+	font-size: 18px;
+	font-weight: 400;
+	display: block;
+}
+
+#nav-title .career {
+	font-size: 12px;
+	color:var(--gray-5);
+}
+
+#menu-links a {
+	font-size: 16px;
+	color: var(--gray-7);
+}
+
+}
+
+@media only screen and (max-width: 770px) {
+
+ #sidenav {
+	display: none;
+}
+
+#mobile-nav {
+	display: block;
+}
+#case-content {
+	margin-top: 107px;
+}
+
+}
+
+/*Media queries - Upscale*/
+
+@media only screen and (min-width: 1920px) {
+
+.site-card {
+	background-color: white;
+	border-radius: 4px;
+	cursor: pointer;
+	min-height: 500px;
+}
+.card-image {
+	height: 365px;
+}
+
+.card-image-2 {
+	height: 365px;
+}
+
+.card-image-3 {
+	height: 365px;
+}
+
+.card-image-4 {
+	height: 365px;
+}
+
+.card-description {
+	font-size: 14px;
+	color:var(--gray-5);
+}
+
+body {
+	overflow: auto;
+}
+
+}
