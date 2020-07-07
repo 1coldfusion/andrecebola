@@ -82,6 +82,10 @@ a:hover {
 	transform: translateY(-5px);
 }
 
+#menu-links li {
+	cursor: pointer;
+}
+
 .hop {
 	transition: all .3s linear;	
 }
